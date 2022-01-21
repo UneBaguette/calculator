@@ -1,5 +1,4 @@
 const allclear = document.querySelector('.clear');
-// const screen = document.querySelector('.screen');
 const operators = document.querySelectorAll('.operator');
 const digits = document.querySelectorAll('.digit');
 let calscreen = document.getElementById('cal');
