@@ -6,7 +6,7 @@ let usertype;
 let screenVal;
 let num1 = '';
 let num2 = '';
-let resultVal; // Montrera le résultat
+let resultVal;
 let ops;
 let ver = true;
 
@@ -73,11 +73,8 @@ for (let i = 0; i < operators.length; i++){
         }
         else {
             usertype = calscreen.textContent;
-            function op() {
-                usertype = usertype.replace(",", ".");
-                num1 = usertype;
-            }
-            op();
+            usertype = usertype.replace(",", ".");
+            num1 = usertype;
             ops = operator.innerText;
             calscreen.innerText = "";
         }
