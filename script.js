@@ -1,8 +1,7 @@
 const allclear = document.querySelector('.clear');
-// const screen = document.querySelector('.screen');
 const operators = document.querySelectorAll('.operator');
 const digits = document.querySelectorAll('.digit');
-let calscreen = document.getElementById('cal');
+const calscreen = document.getElementById('cal');
 let usertype;
 let screenVal;
 let num1 = '';
@@ -28,14 +27,14 @@ for (let i = 0; i < digits.length; i++){
     digit.addEventListener('click' , function() {
         if (calscreen.innerText === '0') {
             calscreen.innerText = digit.innerText;
-            usertype = document.getElementById('cal').textContent;
+            usertype = calscreen.textContent;
         } else if (calscreen.innerText !== '0' && !ver) {
             calscreen.innerText = digit.innerText;
-            usertype = document.getElementById('cal').textContent;
+            usertype = calscreen.textContent;
             ver = true;
         } else {
             calscreen.innerText += digit.innerText;
-            usertype = document.getElementById('cal').textContent;
+            usertype = calscreen.textContent;
         }
     })
 }
@@ -73,7 +72,7 @@ for (let i = 0; i < operators.length; i++){
             eq();
         }
         else {
-            usertype = document.getElementById('cal').textContent;
+            usertype = calscreen.textContent;
             function op() {
                 usertype = usertype.replace(",", ".");
                 num1 = usertype;
